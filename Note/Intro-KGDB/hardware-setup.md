@@ -47,32 +47,8 @@ Giả sử:
 
 📌 Lưu ý: Một máy là **server**, máy kia là **client**, nhưng cả hai dùng cùng đường pipe.
 
-### Bước 3. Bật tùy chọn (không bắt buộc)
+###  1.3. Bật tùy chọn (không bắt buộc)
 
 * Bạn có thể tick **Yield CPU on poll** để tránh chiếm CPU khi poll serial.
 
----
-
-## 🔹 Hình dung kết nối
-
-```
-VM1 (Development, gdb)    <==== Serial over Named Pipe ====>
-VM2 (Target, kernel+KGDB)
-```
-
-Cổng COM trong VM bây giờ mô phỏng như dây serial thật, nối trực tiếp hai máy lại với nhau.
-
----
-
-👉 Sau khi setup xong, trong kernel (VM2) bạn bật KGDB với boot param, ví dụ:
-
-```
-kgdboc=ttyS0,115200
-```
-
-Còn trong VM1, bạn mở gdb với `vmlinux` và connect:
-
-```
-(gdb) target remote /dev/ttyS0
-```
-
+## 2. Test serial port
