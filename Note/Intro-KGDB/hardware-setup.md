@@ -29,7 +29,9 @@ Giả sử:
   ```
 * Chọn **This end is the server**.
 * Chọn **The other end is a virtual machine**.
-* 
+
+![dev](https://toanonestar.github.io/KGDB-note/image-scp/dev.png)
+
 Ở **VM2 (Target)**:
 
 * Chọn **Use named pipe**.
@@ -40,6 +42,8 @@ Giả sử:
   ```
 * Chọn **This end is the client**.
 * Chọn **The other end is a virtual machine**.
+
+![target](https://toanonestar.github.io/KGDB-note/image-scp/target.png)
 
 📌 Lưu ý: Một máy là **server**, máy kia là **client**, nhưng cả hai dùng cùng đường pipe.
 
