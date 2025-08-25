@@ -29,8 +29,7 @@ Giả sử:
   ```
 * Chọn **This end is the server**.
 * Chọn **The other end is a virtual machine**.
-
-
+* 
 Ở **VM2 (Target)**:
 
 * Chọn **Use named pipe**.
