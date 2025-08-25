@@ -52,3 +52,19 @@ Giả sử:
 * Bạn có thể tick **Yield CPU on poll** để tránh chiếm CPU khi poll serial.
 
 ## 2. Test serial port
+Ta có thể kiểm tra kết nối serial port bằng cách:
+
+Trên máy dev:
+```bash
+sudo -s
+cat /dev/ttyS0
+```
+
+Trên máy target:
+```bash
+sudo -s
+echo "hello dev" > /dev/ttyS0
+```
+
+Kết quả:
+![result](https://toanonestar.github.io/KGDB-note/image-scp/result.png)
