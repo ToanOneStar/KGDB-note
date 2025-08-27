@@ -40,7 +40,7 @@ make oldconfig
 Mở menu cấu hình:
 
 ```bash
-make nconfig
+make menuconfig
 ```
 
 Bật các tùy chọn sau:
