@@ -25,4 +25,5 @@ Trong quá trình debug, bạn có thể bật/tắt chế độ TUI bằng:
 Ctrl + x a
 ```
 Ta có giao diện như sau:
+![gdbtui](https://toanonestar.github.io/KGDB-note/image-scp/gdbtui.png)
 
