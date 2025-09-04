@@ -108,7 +108,7 @@ bitbake -e virtual/kernel | grep ^WORKDIR=
 ```
 Sau đó chuyển tới thư mục standard build và sử dụng ```$GDB vmlinux```:
 
-
+![kgdb-ras2](https://toanonestar.github.io/KGDB-note/image-scp/kgdb-ras2.png)
 
 ---
 
@@ -131,10 +131,10 @@ Mở GDB với vmlinux:
 $GDB tmp/work/raspberrypi0_wifi-poky-linux-gnueabi/linux-raspberrypi/*/linux-raspberrypi0_wifi-standard-build/vmlinux
 ```
 
-Trong gdb:
+Trong gdb để list source code thì ta sử dụng ```set substitute-path``` với đường dẫn thường nằm trong ```/home/toanonestar/yocto/poky/build/tmp/work-shared/raspberrypi0-wifi/kernel-source``` :
 
 ```gdb
-(gdb) set substitute-path /usr/src/kernel /home/lwl/Yocto_Training/build_pi/tmp/work-shared/raspberrypi3/kernel-source
+(gdb) set substitute-path /usr/src/kernel /home/toanonestar/yocto/poky/build/tmp/work-shared/raspberrypi0-wifi/kernel-source
 (gdb) target remote localhost:5551
 ```
 
