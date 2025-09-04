@@ -110,7 +110,14 @@ Sau đó chuyển tới thư mục standard build và sử dụng ```$GDB vmlinu
 
 ![kgdb-ras2](https://toanonestar.github.io/KGDB-note/image-scp/kgdb-ras2.png)
 
+Ta ra ngoài thư mục standard và thực hiện lệnh sau để cài đặt scripts:
+```bash
+make scripts_gdb
+```
+Nếu chưa có file ```vmlinux-gdb.py``` nằm cùng thư mục với ```vmlinux``` thì ta có thể copy từ thư mục ```/home/toanonestar/yocto/poky/build/tmp/work-shared/raspberrypi0-wifi/kernel-source/scripts/gdb```
+
 ---
+
 
 ## 7. Cấu hình KGDB trên Raspberry Pi
 
