@@ -92,7 +92,7 @@ sudo ./agent-proxy 5550^5551 0 /dev/ttyUSB0,115200
 ```
 
 * Port 5550: console
-
+![5550](https://toanonestar.github.io/KGDB-note/image-scp/5550.png)
 * Port 5551: kết nối gdb
 
 ---
