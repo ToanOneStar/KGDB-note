@@ -91,29 +91,28 @@ Clone và build `agent-proxy`. Sau đó chạy:
 sudo ./agent-proxy 5550^5551 0 /dev/ttyUSB0,115200
 ```
 
-* Port 5550: console
-![5550](https://toanonestar.github.io/KGDB-note/image-scp/5550.png)
-* Port 5551: kết nối gdb
-
----
-
-## 6. Truy cập console Raspberry Pi qua telnet
+Truy cập console Raspberry Pi qua telnet
 
 ```bash
 telnet localhost 5550
 ```
+![5550](https://toanonestar.github.io/KGDB-note/image-scp/5550.png)
+
 
 ---
 
-## 7. Lấy workdir của kernel trong Yocto build
+## 6. Lấy workdir của kernel trong Yocto build
 
 ```bash
 bitbake -e virtual/kernel | grep ^WORKDIR=
 ```
+Sau đó chuyển tới thư mục standard build và sử dụng ```$GDB vmlinux```:
+
+
 
 ---
 
-## 8. Cấu hình KGDB trên Raspberry Pi
+## 7. Cấu hình KGDB trên Raspberry Pi
 
 Trên target (Pi):
 
@@ -124,7 +123,7 @@ echo g > /proc/sysrq-trigger
 
 ---
 
-## 9. Kết nối GDB từ host
+## 8. Kết nối GDB từ host
 
 Mở GDB với vmlinux:
 
