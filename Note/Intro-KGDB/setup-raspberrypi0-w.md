@@ -137,7 +137,7 @@ Trong gdb để list source code thì ta sử dụng ```set substitute-path``` v
 (gdb) set substitute-path /usr/src/kernel /home/toanonestar/yocto/poky/build/tmp/work-shared/raspberrypi0-wifi/kernel-source
 (gdb) target remote localhost:5551
 ```
-
+![kgdb-ras3](https://toanonestar.github.io/KGDB-note/image-scp/kgdb-ras3.png)
 ---
 
 ## Notes
