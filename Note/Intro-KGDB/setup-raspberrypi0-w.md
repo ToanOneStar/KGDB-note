@@ -71,6 +71,16 @@ Trên host, xác định cổng `/dev/ttyUSB0`.
 
 Chú ý kiểm tra đã kết nối thành công hay chưa bằng lệnh ```sudo dmesg```:
 
+![kgdb-ras](https://toanonestar.github.io/KGDB-note/image-scp/kgdb-ras.png)
+
+Nếu bị lỗi disconnect thì cần gỡ bở gói Braille chiếm dụng cổng USB0:
+```bash
+sudo apt remove brltty
+```
+Kết nối minicom:
+```bash
+sudo minicom -D /dev/ttyUSB0 -b 115200
+```
 
 ---
 ## 5. Build và chạy agent-proxy
@@ -78,10 +88,11 @@ Chú ý kiểm tra đã kết nối thành công hay chưa bằng lệnh ```sudo
 Clone và build `agent-proxy`. Sau đó chạy:
 
 ```bash
-./agent-proxy 5550^5551 0 /dev/ttyUSB0,115200
+sudo ./agent-proxy 5550^5551 0 /dev/ttyUSB0,115200
 ```
 
 * Port 5550: console
+
 * Port 5551: kết nối gdb
 
 ---
