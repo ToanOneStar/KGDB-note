@@ -16,10 +16,12 @@ Bật các tùy chọn sau trong kernel config:
 * `CONFIG_KGDB`
 * `CONFIG_GDB_SCRIPTS`
 
-Thêm gói `gdbserver` vào image:
+Thêm gói `gdbserver` vào image và bật chế độ không strip symbol module khi đóng gói sửa trong file `local.conf`:
 
 ```conf
 IMAGE_INSTALL_append = " gdbserver"
+INHIBIT_PACKAGE_STRIP = "1"
+INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 ```
 
 Sau đó build image:
