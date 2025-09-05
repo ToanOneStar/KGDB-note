@@ -15,6 +15,12 @@ cd /home/toanonestar/yocto/poky/build/tmp/deploy/sdk/
 ```
 ![environment](https://toanonestar.github.io/KGDB-note/image-scp/environment.png)
 
+
+Sau đó chuyển tới thư mục standard build để khởi động GDB:
+```bash
+cd /home/toanonestar/yocto/poky/build/tmp/work/raspberrypi0_wifi-poky-linux-gnueabi/linux-raspberrypi/1_5.4.72+gitAUTOINC+5d52d9eea9_154de7bbd5-r0/linux-raspberrypi0_wifi-standard-build/
+$GDB vmlinux
+```
 Trên target (Pi):
 
 ```bash
