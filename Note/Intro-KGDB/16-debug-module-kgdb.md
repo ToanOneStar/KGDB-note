@@ -12,8 +12,8 @@ telnet localhost 5550
 Khởi tạo biến môi trường:
 ```bash
 cd /home/toanonestar/yocto/poky/build/tmp/deploy/sdk/
-
 ```
+![environment](https://toanonestar.github.io/KGDB-note/image-scp/environment.png)
 
 Trên target (Pi):
 
